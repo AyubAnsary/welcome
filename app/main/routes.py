@@ -1,0 +1,28 @@
+from flask import render_template
+
+from . import main_bp
+
+
+@main_bp.route('/')
+def home():
+    return render_template('main/home.html')
+
+
+@main_bp.route('/about')
+def about():
+    return render_template('main/about.html')
+
+
+@main_bp.route('/contact')
+def contact():
+    return render_template('main/contact.html')
+
+
+@main_bp.route('/terms')
+def terms():
+    return render_template('main/terms.html')
+
+
+@main_bp.route('/privacy')
+def privacy():
+    return render_template('main/privacy.html')
